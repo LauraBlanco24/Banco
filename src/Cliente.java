@@ -53,4 +53,8 @@ public class Cliente {
         }
     }
 
+    public double consultarSaldo(){
+        System.out.println("su saldo es de $ "+this.cuenta.Saldo);
+        return this.cuenta.Saldo;
+    }
 }
