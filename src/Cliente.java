@@ -42,4 +42,15 @@ public class Cliente {
     public void setTipoDocumento(String tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
     }
+    public double retirar(double cantidad){
+        if(cantidad <= this.cuenta.Saldo){
+            this.cuenta.Saldo = this.cuenta.Saldo - cantidad;
+            System.out.println("Transación exitosa, su nuevo saldo es $ "+this.cuenta.Saldo);
+            return this.cuenta.Saldo;
+        }else{
+            System.err.println("Saldo insuficiente su saldo actual es de $ "+this.cuenta.Saldo+" Y usted deseea retirar $ "+cantidad);
+            return this.cuenta.Saldo;
+        }
+    }
+
 }
